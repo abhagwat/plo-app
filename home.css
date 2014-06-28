@@ -1,0 +1,44 @@
+#wrapper{
+	display:-webkit-box;
+	-webkit-box-orient:horizontal;
+
+	width:80%;
+	margin:40px 10%;
+}
+
+p{
+	margin:0px;
+}
+
+#months{
+	display:-webkit-box;
+	-webkit-box-orient:vertical;
+	
+	width:20%;
+}
+
+#months h3{
+	padding-left:40px;
+}
+
+#months div{
+	border-top:2px dotted black;
+	padding:5px 5px 5px 50px;
+}
+
+#display{
+	width:80%;
+	padding:0px 30px;
+}
+
+#display h2{
+	text-align:center;
+	font:bold 40px printclearly;
+	margin:0px 0px 20px 0px;
+}
+
+#display h3{
+	text-align:center;
+	font:30px printclearly;
+	margin:0px 0px 20px 0px;
+}
