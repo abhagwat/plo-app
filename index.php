@@ -42,7 +42,7 @@
 				$problem_month = $matches[0][0];
 				
 				if(!array_key_exists('problem', $_GET))
-					$problem_week = sizeof(scandir("problems/".$months[sizeof($months)-1]));
+					$problem_week = sizeof(scandir("problems/".$months[sizeof($months)-1]))-2; // -2 TO REMOVE THE FILES . AND ..
 				else
 					$problem_week = $matches[0][1];
 				
