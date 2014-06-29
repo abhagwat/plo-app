@@ -12,12 +12,15 @@
 		<div id="wrapper">
 			<div id="months">
 				<?php 
+				/* MONTHS = LIST OF ALL MONTH FOLDERS
+				 * WEEKS = A VARIABLE LIST OF 4 PROBLEMS IN MONTH i 
+				 * FOURSET = A STRING WHICH CONCATENATES THE NAMES OF PROBLEMS */
 					$months = scandir("problems");
 					for($i=2; $i<sizeof($months); $i++){ 
 						$weeks = scandir("problems/".$months[$i]);
 						$fourset = "<h3>".substr($months[$i], 2)."</h3><div name=".($i-1).">";
-						for($j=2; $j<sizeof($weeks); $j++) $fourset = $fourset."<p>".substr($weeks[$j], 7)."</p>";
-						$fourset = $fourset."</div>";
+						for($j=2; $j<sizeof($weeks); $j++) $fourset = $fourset."<p class=problemlink name=".($i-1).".".($j-1).">".substr($weeks[$j], 7)."</p>";
+						$fourset = $fourset."</div>"; // CLOSES THE div TAG 
 						echo($fourset);
 					}
 				?>
