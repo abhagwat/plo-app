@@ -17,6 +17,8 @@
 				 * FOURSET = A STRING WHICH CONCATENATES THE NAMES OF PROBLEMS 
 				 * PROBLEMNUMBER = NUMBER OF PROBLEM IN THE FORMAT 2.3, 4.1, ETC*/
 					$months = scandir("problems");
+                    natsort($months); // NATURAL SORT ON THE MONTHS
+                    $months = array_values($months); // REARRANGING ARRAY KEYS
 					for($i=sizeof($months)-1; $i>=2; $i--){ 
 						$weeks = scandir("problems/".$months[$i]);
 						$fourset = "<h3>".substr($months[$i], 2)."</h3><div name=".($i-1).">";
